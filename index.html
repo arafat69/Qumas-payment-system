@@ -1,0 +1,1773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashboard - CSN helpdesk</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-topBar">
+        <!-- Navbar Brand-->
+        <a class="navbar-brand ps-3" href="index.html">
+            <img src="assets/img/Logo.png">
+        </a>
+        <!-- Sidebar Toggle-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
+                class="fas fa-bars"></i></button>
+        <!-- Navbar Search-->
+
+        <!-- Navbar-->
+        <ul class="navbar-nav ml-auto me-lg-3 me-2">
+            <li class="nav-item d-none d-sm-block">
+                <a class="nav-link"> Admin Name</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"> <i class="fas fa-bell"></i> </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-toggle="dropdown"
+                    aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#!">Settings</a></li>
+                    <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li><a class="dropdown-item" href="#!">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <a class="nav-link active" href="index.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            Dashboard
+                        </a>
+
+                        <div  class="nav-border-bottom"></div>
+
+                        <a class="nav-link collapsed" href="javascript:void(0)" data-toggle="collapse" data-target="#collapseTickets" aria-expanded="false" aria-controls="collapseTickets">
+                            <div class="sb-nav-link-icon"><i class="fas fa-ticket-alt"></i></div>
+                            Tickets
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapseTickets" aria-labelledby="collapseTickets" data-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="#">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-ticket-alt"></i></div>
+                                    Total Tickets
+                                </a>
+                                <a class="nav-link" href="#">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-plane"></i></div>
+                                    Travel Ticket
+                                </a>
+                            </nav>
+                        </div>
+
+                        <div  class="nav-border-bottom"></div>
+
+                        <a class="nav-link" href="#">
+                            <div class="sb-nav-link-icon"><i class="fas fa-calendar-alt"></i></div>
+                            Calendarize
+                        </a>
+
+                        <div  class="nav-border-bottom"></div>
+
+                        <a class="nav-link" href="#">
+                            <div class="sb-nav-link-icon"><i class="fas fa-newspaper"></i></div>
+                            Update/News
+                        </a>
+
+                        <div  class="nav-border-bottom"></div>
+
+                        <a class="nav-link collapsed" href="javascript:void(0)" data-toggle="collapse" data-target="#collapseConfigrations" aria-expanded="false" aria-controls="collapseConfigrations">
+                            <div class="sb-nav-link-icon"><i class="fas fa-cog"></i></div>
+                            Configrations
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapseConfigrations" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="#">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-check-circle"></i></div>
+                                    Statuses
+                                </a>
+                                <a class="nav-link" href="#">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-user-friends"></i></div>
+                                    Employes
+                                </a>
+                                <a class="nav-link" href="#">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                    Branches
+                                </a>
+
+                                <a class="nav-link collapsed" href="javascript:void(0)" data-toggle="collapse" data-target="#collapseConfigrationsQumas" aria-expanded="false" aria-controls="collapseConfigrationsQumas">
+                                    <div class="sb-nav-link-icon"><img src="assets/img/quora.png" width="22"></div>
+                                    Qumas
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+
+                                <div class="collapse" id="collapseConfigrationsQumas" aria-labelledby="headingTwo" data-parent="#collapseConfigrations">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="service.html">
+                                            <div class="sb-nav-sub-link-icon"><i class="fas fa-circle"></i></div>
+                                            Service
+                                        </a>
+                                        <a class="nav-link" href="all-token.html">
+                                            <div class="sb-nav-sub-link-icon"><i class="fas fa-circle"></i></div>
+                                            All Token
+                                        </a>
+                                    </nav>
+                                </div>
+
+                            </nav>
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="dashboard-header bg-white p-3 shadow-sm d-flex justify-content-between">
+                    <h3>
+                        <i class="fas fa-tachometer-alt"></i>
+                        Dashboard
+                    </h3>
+                </div>
+                <div class="container-fluid px-4">
+
+                    <div class="main-content">
+                        <div class="row">
+                            <div class="col-6 col-sm-4 col-md-3 col-xl-2 bash-content px-2">
+                                <div class="card card-body rounded-0 border-0 p-2">
+                                    <div class="card-box">
+                                        <div>
+                                            <p class="box-text">Total Tickets</p>
+                                            <p class="box-num color-orange">6583</p>
+                                        </div>
+                                        <div>
+                                            <img class="box-icon" src="assets/img/Total Tickets.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-xl-2 bash-content px-2">
+                                <div class="card card-body rounded-0 border-0 p-2">
+                                    <div class="card-box">
+                                        <div>
+                                            <p class="box-text">Today's Tickets</p>
+                                            <p class="box-num color-pink">98</p>
+                                        </div>
+                                        <div>
+                                            <img class="box-icon" src="assets/img/Today's Tickets.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-xl-2 bash-content px-2">
+                                <div class="card card-body rounded-0 border-0 p-2">
+                                    <div class="card-box">
+                                        <div>
+                                            <p class="box-text">Recent messages</p>
+                                            <p class="box-num color-green">12</p>
+                                        </div>
+                                        <div>
+                                            <img class="box-icon" src="assets/img/Recent messages.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-xl-2 bash-content px-2">
+                                <div class="card card-body rounded-0 border-0 p-2">
+                                    <div class="card-box">
+                                        <div>
+                                            <p class="box-text">Unread messages</p>
+                                            <p class="box-num color-red">3</p>
+                                        </div>
+                                        <div>
+                                            <img class="box-icon" src="assets/img/Unread messages.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-xl-2 bash-content px-2">
+                                <div class="card card-body rounded-0 border-0 p-2">
+                                    <div class="card-box">
+                                        <div>
+                                            <p class="box-text">Total Update/News</p>
+                                            <p class="box-num color-orange">6583</p>
+                                        </div>
+                                        <div>
+                                            <img class="box-icon" src="assets/img/Total Update-News.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-xl-2 bash-content px-2">
+                                <div class="card card-body rounded-0 border-0 p-2 ps-xl-1">
+                                    <div class="card-box">
+                                        <div>
+                                            <p class="box-text">Unread Update/News</p>
+                                            <p class="box-num color-red ps-xl-2">63</p>
+                                        </div>
+                                        <div>
+                                            <img class="box-icon" src="assets/img/Unread Update-News.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xl-9 px-2 overflow-hidden">
+
+                            <div class="LastTicket">
+                                <h3 class="title mb-3">Last Update Tickets</h3>
+
+                                <ul class="ticket-header dashBoard">
+                                    <li style="padding-left: 10px;">Id</li>
+                                    <li>Assignee</li>
+                                    <li>Service</li>
+                                    <li>Raised By</li>
+                                    <li>status</li>
+                                    <li>date & schedule</li>
+                                    <li>File id</li>
+                                </ul>
+
+                                <div class="dashboard_content shadow-sm very_low">
+                                    <!-- Id -->
+                                    <div class="item">
+                                        <span class="font-13 semibold">#000023</span>
+                                    </div>
+                                    <!-- Assignee -->
+                                    <div class="item">
+                                        <div>
+                                            <img class="img" src="assets/img/avatar_1.png">
+                                        </div>
+                                        <div>
+                                            <span class="semibold font-13">Angela Alemanno</span>
+                                        </div>
+                                    </div>
+                                    <!-- Service -->
+                                    <div class="item">
+                                        <span class="font-13 bold">Gestione contratto domestico</span>
+                                    </div>
+                                    <!-- Raised By -->
+                                    <div class="item">
+                                        <div>
+                                            <img class="img" src="assets/img/avatar_2.png">
+                                        </div>
+                                        <div>
+                                            <span class="semibold font-13 text-capitalize">palash hawlader</span>
+                                        </div>
+                                    </div>
+                                    <!-- status -->
+                                    <div class="item">
+                                        <div class="dropdown">
+                                            <button class="custom-btn dropdown-toggle" type="button"
+                                                id="dropdownMenuButton" data-toggle="dropdown">
+                                                New
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- date & schedule -->
+                                    <div class="item">
+                                        <div class="">
+                                            <span class="font-13 semibold d-block">Mar 28, 2022</span>
+                                            <span class="font-12 semibold">24 hours</span>
+                                        </div>
+                                    </div>
+                                    <!-- file id -->
+                                    <div class="item">
+                                        <div class="file-item">
+                                            <span class="font-13 bold"> #69521</span>
+                                        </div>
+                                        <div class="file-item">
+                                            <span class="position-relative messigeIcon" id="messageBoxShow">
+                                                <i class="fas fa-comments"></i>
+                                                <span class="notice position-absolute">9+</span>
+                                            </span>
+                                        </div>
+                                        <div class="file-item">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dashboard_content shadow-sm low">
+                                    <!-- Id -->
+                                    <div class="item">
+                                        <span class="font-13 semibold">#000023</span>
+                                    </div>
+                                    <!-- Assignee -->
+                                    <div class="item">
+                                        <div>
+                                            <img class="img" src="assets/img/avatar_1.png">
+                                        </div>
+                                        <div>
+                                            <span class="semibold font-13">Angela Alemanno</span>
+                                        </div>
+                                    </div>
+                                    <!-- Service -->
+                                    <div class="item">
+                                        <span class="font-13 bold">Gestione contratto domestico</span>
+                                    </div>
+                                    <!-- Raised By -->
+                                    <div class="item">
+                                        <div>
+                                            <img class="img" src="assets/img/avatar_2.png">
+                                        </div>
+                                        <div>
+                                            <span class="semibold font-13 text-capitalize">palash hawlader</span>
+                                        </div>
+                                    </div>
+                                    <!-- status -->
+                                    <div class="item">
+                                        <div class="dropdown">
+                                            <button class="custom-btn dropdown-toggle" type="button"
+                                                id="dropdownMenuButton" data-toggle="dropdown">
+                                                New
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- date & schedule -->
+                                    <div class="item">
+                                        <div class="">
+                                            <span class="font-13 semibold d-block">Mar 28, 2022</span>
+                                            <span class="font-12 semibold">24 hours</span>
+                                        </div>
+                                    </div>
+                                    <!-- file id -->
+                                    <div class="item">
+                                        <div class="file-item">
+                                            <span class="font-13 bold"> #69521</span>
+                                        </div>
+                                        <div class="file-item">
+                                            <span class="position-relative messigeIcon" id="messageBoxShow">
+                                                <i class="fas fa-comments"></i>
+                                                <span class="notice position-absolute">9+</span>
+                                            </span>
+                                        </div>
+                                        <div class="file-item">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dashboard_content shadow-sm medium">
+                                    <!-- Id -->
+                                    <div class="item">
+                                        <span class="font-13 semibold">#000023</span>
+                                    </div>
+                                    <!-- Assignee -->
+                                    <div class="item">
+                                        <div>
+                                            <img class="img" src="assets/img/avatar_1.png">
+                                        </div>
+                                        <div>
+                                            <span class="semibold font-13">Angela Alemanno</span>
+                                        </div>
+                                    </div>
+                                    <!-- Service -->
+                                    <div class="item">
+                                        <span class="font-13 bold">Gestione contratto domestico</span>
+                                    </div>
+                                    <!-- Raised By -->
+                                    <div class="item">
+                                        <div>
+                                            <img class="img" src="assets/img/avatar_2.png">
+                                        </div>
+                                        <div>
+                                            <span class="semibold font-13 text-capitalize">palash hawlader</span>
+                                        </div>
+                                    </div>
+                                    <!-- status -->
+                                    <div class="item">
+                                        <div class="dropdown">
+                                            <button class="custom-btn dropdown-toggle" type="button"
+                                                id="dropdownMenuButton" data-toggle="dropdown">
+                                                New
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- date & schedule -->
+                                    <div class="item">
+                                        <div class="">
+                                            <span class="font-13 semibold d-block">Mar 28, 2022</span>
+                                            <span class="font-12 semibold">24 hours</span>
+                                        </div>
+                                    </div>
+                                    <!-- file id -->
+                                    <div class="item">
+                                        <div class="file-item">
+                                            <span class="font-13 bold"> #69521</span>
+                                        </div>
+                                        <div class="file-item">
+                                            <span class="position-relative messigeIcon" id="messageBoxShow">
+                                                <i class="fas fa-comments"></i>
+                                                <span class="notice position-absolute">9+</span>
+                                            </span>
+                                        </div>
+                                        <div class="file-item">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dashboard_content shadow-sm heigh">
+                                    <!-- Id -->
+                                    <div class="item">
+                                        <span class="font-13 semibold">#000023</span>
+                                    </div>
+                                    <!-- Assignee -->
+                                    <div class="item">
+                                        <div>
+                                            <img class="img" src="assets/img/avatar_1.png">
+                                        </div>
+                                        <div>
+                                            <span class="semibold font-13">Angela Alemanno</span>
+                                        </div>
+                                    </div>
+                                    <!-- Service -->
+                                    <div class="item">
+                                        <span class="font-13 bold">Gestione contratto domestico</span>
+                                    </div>
+                                    <!-- Raised By -->
+                                    <div class="item">
+                                        <div>
+                                            <img class="img" src="assets/img/avatar_2.png">
+                                        </div>
+                                        <div>
+                                            <span class="semibold font-13 text-capitalize">palash hawlader</span>
+                                        </div>
+                                    </div>
+                                    <!-- status -->
+                                    <div class="item">
+                                        <div class="dropdown">
+                                            <button class="custom-btn dropdown-toggle" type="button"
+                                                id="dropdownMenuButton" data-toggle="dropdown">
+                                                New
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- date & schedule -->
+                                    <div class="item">
+                                        <div class="">
+                                            <span class="font-13 semibold d-block">Mar 28, 2022</span>
+                                            <span class="font-12 semibold">24 hours</span>
+                                        </div>
+                                    </div>
+                                    <!-- file id -->
+                                    <div class="item">
+                                        <div class="file-item">
+                                            <span class="font-13 bold"> #69521</span>
+                                        </div>
+                                        <div class="file-item">
+                                            <span class="position-relative messigeIcon">
+                                                <i class="fas fa-comments"></i>
+                                                <span class="notice position-absolute">9+</span>
+                                            </span>
+                                        </div>
+                                        <div class="file-item">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dashboard_content shadow-sm very_heigh">
+                                    <!-- Id -->
+                                    <div class="item">
+                                        <span class="font-13 semibold">#000023</span>
+                                    </div>
+                                    <!-- Assignee -->
+                                    <div class="item">
+                                        <div>
+                                            <img class="img" src="assets/img/avatar_1.png">
+                                        </div>
+                                        <div>
+                                            <span class="semibold font-13">Angela Alemanno</span>
+                                        </div>
+                                    </div>
+                                    <!-- Service -->
+                                    <div class="item">
+                                        <span class="font-13 bold">Gestione contratto domestico</span>
+                                    </div>
+                                    <!-- Raised By -->
+                                    <div class="item">
+                                        <div>
+                                            <img class="img" src="assets/img/avatar_2.png">
+                                        </div>
+                                        <div>
+                                            <span class="semibold font-13 text-capitalize">palash hawlader</span>
+                                        </div>
+                                    </div>
+                                    <!-- status -->
+                                    <div class="item">
+                                        <div class="dropdown">
+                                            <button class="custom-btn dropdown-toggle" type="button"
+                                                id="dropdownMenuButton" data-toggle="dropdown">
+                                                New
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- date & schedule -->
+                                    <div class="item">
+                                        <div class="">
+                                            <span class="font-13 semibold d-block">Mar 28, 2022</span>
+                                            <span class="font-12 semibold">24 hours</span>
+                                        </div>
+                                    </div>
+                                    <!-- file id -->
+                                    <div class="item">
+                                        <div class="file-item">
+                                            <span class="font-13 bold"> #69521</span>
+                                        </div>
+                                        <div class="file-item">
+                                            <span class="position-relative messigeIcon">
+                                                <i class="fas fa-comments"></i>
+                                                <span class="notice position-absolute">9+</span>
+                                            </span>
+                                        </div>
+                                        <div class="file-item">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- custom-bootstrap pagination -->
+                                <div class="d-flex justify-content-end my-2">
+                                    <nav aria-label="Page navigation example ">
+                                        <ul class="pagination">
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Next">
+                                                    <span aria-hidden="true">&raquo;</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+
+                            </div>
+
+                            <div class="todaysTicket mt-2">
+                                <h3 class="title mb-3">Today's Tickets</h3>
+
+                                <ul class="ticket-header dashBoard">
+                                    <li style="padding-left: 10px;">Id</li>
+                                    <li>Assignee</li>
+                                    <li>Service</li>
+                                    <li>Raised By</li>
+                                    <li>status</li>
+                                    <li>date & schedule</li>
+                                    <li>File id</li>
+                                </ul>
+
+                                <div class="dashboard_content shadow-sm very_low">
+                                    <!-- Id -->
+                                    <div class="item">
+                                        <span class="font-13 semibold">#000023</span>
+                                    </div>
+                                    <!-- Assignee -->
+                                    <div class="item">
+                                        <div>
+                                            <img class="img" src="assets/img/avatar_1.png">
+                                        </div>
+                                        <div>
+                                            <span class="semibold font-13">Angela Alemanno</span>
+                                        </div>
+                                    </div>
+                                    <!-- Service -->
+                                    <div class="item">
+                                        <span class="font-13 bold">Gestione contratto domestico</span>
+                                    </div>
+                                    <!-- Raised By -->
+                                    <div class="item">
+                                        <div>
+                                            <img class="img" src="assets/img/avatar_2.png">
+                                        </div>
+                                        <div>
+                                            <span class="semibold font-13 text-capitalize">palash hawlader</span>
+                                        </div>
+                                    </div>
+                                    <!-- status -->
+                                    <div class="item">
+                                        <div class="dropdown">
+                                            <button class="custom-btn dropdown-toggle" type="button"
+                                                id="dropdownMenuButton" data-toggle="dropdown">
+                                                New
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- date & schedule -->
+                                    <div class="item">
+                                        <div class="">
+                                            <span class="font-13 semibold d-block">Mar 28, 2022</span>
+                                            <span class="font-12 semibold">24 hours</span>
+                                        </div>
+                                    </div>
+                                    <!-- file id -->
+                                    <div class="item">
+                                        <div class="file-item">
+                                            <span class="font-13 bold"> #69521</span>
+                                        </div>
+                                        <div class="file-item">
+                                            <span class="position-relative messigeIcon" id="messageBoxShow">
+                                                <i class="fas fa-comments"></i>
+                                                <span class="notice position-absolute">9+</span>
+                                            </span>
+                                        </div>
+                                        <div class="file-item">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dashboard_content shadow-sm low">
+                                    <!-- Id -->
+                                    <div class="item">
+                                        <span class="font-13 semibold">#000023</span>
+                                    </div>
+                                    <!-- Assignee -->
+                                    <div class="item">
+                                        <div>
+                                            <img class="img" src="assets/img/avatar_1.png">
+                                        </div>
+                                        <div>
+                                            <span class="semibold font-13">Angela Alemanno</span>
+                                        </div>
+                                    </div>
+                                    <!-- Service -->
+                                    <div class="item">
+                                        <span class="font-13 bold">Gestione contratto domestico</span>
+                                    </div>
+                                    <!-- Raised By -->
+                                    <div class="item">
+                                        <div>
+                                            <img class="img" src="assets/img/avatar_2.png">
+                                        </div>
+                                        <div>
+                                            <span class="semibold font-13 text-capitalize">palash hawlader</span>
+                                        </div>
+                                    </div>
+                                    <!-- status -->
+                                    <div class="item">
+                                        <div class="dropdown">
+                                            <button class="custom-btn dropdown-toggle" type="button"
+                                                id="dropdownMenuButton" data-toggle="dropdown">
+                                                New
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- date & schedule -->
+                                    <div class="item">
+                                        <div class="">
+                                            <span class="font-13 semibold d-block">Mar 28, 2022</span>
+                                            <span class="font-12 semibold">24 hours</span>
+                                        </div>
+                                    </div>
+                                    <!-- file id -->
+                                    <div class="item">
+                                        <div class="file-item">
+                                            <span class="font-13 bold"> #69521</span>
+                                        </div>
+                                        <div class="file-item">
+                                            <span class="position-relative messigeIcon" id="messageBoxShow">
+                                                <i class="fas fa-comments"></i>
+                                                <span class="notice position-absolute">9+</span>
+                                            </span>
+                                        </div>
+                                        <div class="file-item">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dashboard_content shadow-sm medium">
+                                    <!-- Id -->
+                                    <div class="item">
+                                        <span class="font-13 semibold">#000023</span>
+                                    </div>
+                                    <!-- Assignee -->
+                                    <div class="item">
+                                        <div>
+                                            <img class="img" src="assets/img/avatar_1.png">
+                                        </div>
+                                        <div>
+                                            <span class="semibold font-13">Angela Alemanno</span>
+                                        </div>
+                                    </div>
+                                    <!-- Service -->
+                                    <div class="item">
+                                        <span class="font-13 bold">Gestione contratto domestico</span>
+                                    </div>
+                                    <!-- Raised By -->
+                                    <div class="item">
+                                        <div>
+                                            <img class="img" src="assets/img/avatar_2.png">
+                                        </div>
+                                        <div>
+                                            <span class="semibold font-13 text-capitalize">palash hawlader</span>
+                                        </div>
+                                    </div>
+                                    <!-- status -->
+                                    <div class="item">
+                                        <div class="dropdown">
+                                            <button class="custom-btn dropdown-toggle" type="button"
+                                                id="dropdownMenuButton" data-toggle="dropdown">
+                                                New
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- date & schedule -->
+                                    <div class="item">
+                                        <div class="">
+                                            <span class="font-13 semibold d-block">Mar 28, 2022</span>
+                                            <span class="font-12 semibold">24 hours</span>
+                                        </div>
+                                    </div>
+                                    <!-- file id -->
+                                    <div class="item">
+                                        <div class="file-item">
+                                            <span class="font-13 bold"> #69521</span>
+                                        </div>
+                                        <div class="file-item">
+                                            <span class="position-relative messigeIcon" id="messageBoxShow">
+                                                <i class="fas fa-comments"></i>
+                                                <span class="notice position-absolute">9+</span>
+                                            </span>
+                                        </div>
+                                        <div class="file-item">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dashboard_content shadow-sm heigh">
+                                    <div class="item">
+                                        <span class="font-13 semibold">#000023</span>
+                                    </div>
+                                    <div class="item">
+                                        <div>
+                                            <img class="img" src="assets/img/avatar_1.png">
+                                        </div>
+                                        <div>
+                                            <span class="semibold font-13">Angela Alemanno</span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <span class="font-13 bold">Gestione contratto domestico</span>
+                                    </div>
+                                    <div class="item">
+                                        <div>
+                                            <img class="img" src="assets/img/avatar_2.png">
+                                        </div>
+                                        <div>
+                                            <span class="semibold font-13 text-capitalize">palash hawlader</span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="dropdown">
+                                            <button class="custom-btn dropdown-toggle" type="button"
+                                                id="dropdownMenuButton" data-toggle="dropdown">
+                                                New
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="">
+                                            <span class="font-13 semibold d-block">Mar 28, 2022</span>
+                                            <span class="font-12 semibold">24 hours</span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="file-item">
+                                            <span class="font-13 bold"> #69521</span>
+                                        </div>
+                                        <div class="file-item">
+                                            <span class="position-relative messigeIcon">
+                                                <i class="fas fa-comments"></i>
+                                                <span class="notice position-absolute">9+</span>
+                                            </span>
+                                        </div>
+                                        <div class="file-item">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dashboard_content shadow-sm very_heigh">
+                                    <div class="item">
+                                        <span class="font-13 semibold">#000023</span>
+                                    </div>
+                                    <div class="item">
+                                        <div>
+                                            <img class="img" src="assets/img/avatar_1.png">
+                                        </div>
+                                        <div>
+                                            <span class="semibold font-13">Angela Alemanno</span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <span class="font-13 bold">Gestione contratto domestico</span>
+                                    </div>
+                                    <div class="item">
+                                        <div>
+                                            <img class="img" src="assets/img/avatar_2.png">
+                                        </div>
+                                        <div>
+                                            <span class="semibold font-13 text-capitalize">palash hawlader</span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="dropdown">
+                                            <button class="custom-btn dropdown-toggle" type="button"
+                                                id="dropdownMenuButton" data-toggle="dropdown">
+                                                New
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="">
+                                            <span class="font-13 semibold d-block">Mar 28, 2022</span>
+                                            <span class="font-12 semibold">24 hours</span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="file-item">
+                                            <span class="font-13 bold"> #69521</span>
+                                        </div>
+                                        <div class="file-item">
+                                            <span class="position-relative messigeIcon">
+                                                <i class="fas fa-comments"></i>
+                                                <span class="notice position-absolute">9+</span>
+                                            </span>
+                                        </div>
+                                        <div class="file-item">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dashboard_content shadow-sm very_low">
+                                    <div class="item">
+                                        <span class="font-13 semibold">#000023</span>
+                                    </div>
+                                    <div class="item">
+                                        <div>
+                                            <img class="img" src="assets/img/avatar_1.png">
+                                        </div>
+                                        <div>
+                                            <span class="semibold font-13">Angela Alemanno</span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <span class="font-13 bold">Gestione contratto domestico</span>
+                                    </div>
+                                    <div class="item">
+                                        <div>
+                                            <img class="img" src="assets/img/avatar_2.png">
+                                        </div>
+                                        <div>
+                                            <span class="semibold font-13 text-capitalize">palash hawlader</span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="dropdown">
+                                            <button class="custom-btn dropdown-toggle" type="button"
+                                                id="dropdownMenuButton" data-toggle="dropdown">
+                                                New
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="">
+                                            <span class="font-13 semibold d-block">Mar 28, 2022</span>
+                                            <span class="font-12 semibold">24 hours</span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="file-item">
+                                            <span class="font-13 bold"> #69521</span>
+                                        </div>
+                                        <div class="file-item">
+                                            <span class="position-relative messigeIcon">
+                                                <i class="fas fa-comments"></i>
+                                                <span class="notice position-absolute">9+</span>
+                                            </span>
+                                        </div>
+                                        <div class="file-item">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dashboard_content shadow-sm low">
+                                    <div class="item">
+                                        <span class="font-13 semibold">#000023</span>
+                                    </div>
+                                    <div class="item">
+                                        <div>
+                                            <img class="img" src="assets/img/avatar_1.png">
+                                        </div>
+                                        <div>
+                                            <span class="semibold font-13">Angela Alemanno</span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <span class="font-13 bold">Gestione contratto domestico</span>
+                                    </div>
+                                    <div class="item">
+                                        <div>
+                                            <img class="img" src="assets/img/avatar_2.png">
+                                        </div>
+                                        <div>
+                                            <span class="semibold font-13 text-capitalize">palash hawlader</span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="dropdown">
+                                            <button class="custom-btn dropdown-toggle" type="button"
+                                                id="dropdownMenuButton" data-toggle="dropdown">
+                                                New
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="">
+                                            <span class="font-13 semibold d-block">Mar 28, 2022</span>
+                                            <span class="font-12 semibold">24 hours</span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="file-item">
+                                            <span class="font-13 bold"> #69521</span>
+                                        </div>
+                                        <div class="file-item">
+                                            <span class="position-relative messigeIcon">
+                                                <i class="fas fa-comments"></i>
+                                                <span class="notice position-absolute">9+</span>
+                                            </span>
+                                        </div>
+                                        <div class="file-item">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dashboard_content shadow-sm medium">
+                                    <div class="item">
+                                        <span class="font-13 semibold">#000023</span>
+                                    </div>
+                                    <div class="item">
+                                        <div>
+                                            <img class="img" src="assets/img/avatar_1.png">
+                                        </div>
+                                        <div>
+                                            <span class="semibold font-13">Angela Alemanno</span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <span class="font-13 bold">Gestione contratto domestico</span>
+                                    </div>
+                                    <div class="item">
+                                        <div>
+                                            <img class="img" src="assets/img/avatar_2.png">
+                                        </div>
+                                        <div>
+                                            <span class="semibold font-13 text-capitalize">palash hawlader</span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="dropdown">
+                                            <button class="custom-btn dropdown-toggle" type="button"
+                                                id="dropdownMenuButton" data-toggle="dropdown">
+                                                New
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="">
+                                            <span class="font-13 semibold d-block">Mar 28, 2022</span>
+                                            <span class="font-12 semibold">24 hours</span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="file-item">
+                                            <span class="font-13 bold"> #69521</span>
+                                        </div>
+                                        <div class="file-item">
+                                            <span class="position-relative messigeIcon">
+                                                <i class="fas fa-comments"></i>
+                                                <span class="notice position-absolute">9+</span>
+                                            </span>
+                                        </div>
+                                        <div class="file-item">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dashboard_content shadow-sm heigh">
+                                    <div class="item">
+                                        <span class="font-13 semibold">#000023</span>
+                                    </div>
+                                    <div class="item">
+                                        <div>
+                                            <img class="img" src="assets/img/avatar_1.png">
+                                        </div>
+                                        <div>
+                                            <span class="semibold font-13">Angela Alemanno</span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <span class="font-13 bold">Gestione contratto domestico</span>
+                                    </div>
+                                    <div class="item">
+                                        <div>
+                                            <img class="img" src="assets/img/avatar_2.png">
+                                        </div>
+                                        <div>
+                                            <span class="semibold font-13 text-capitalize">palash hawlader</span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="dropdown">
+                                            <button class="custom-btn dropdown-toggle" type="button"
+                                                id="dropdownMenuButton" data-toggle="dropdown">
+                                                New
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="">
+                                            <span class="font-13 semibold d-block">Mar 28, 2022</span>
+                                            <span class="font-12 semibold">24 hours</span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="file-item">
+                                            <span class="font-13 bold"> #69521</span>
+                                        </div>
+                                        <div class="file-item">
+                                            <span class="position-relative messigeIcon">
+                                                <i class="fas fa-comments"></i>
+                                                <span class="notice position-absolute">9+</span>
+                                            </span>
+                                        </div>
+                                        <div class="file-item">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dashboard_content shadow-sm very_heigh">
+                                    <div class="item">
+                                        <span class="font-13 semibold">#000023</span>
+                                    </div>
+                                    <div class="item">
+                                        <div>
+                                            <img class="img" src="assets/img/avatar_1.png">
+                                        </div>
+                                        <div>
+                                            <span class="semibold font-13">Angela Alemanno</span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <span class="font-13 bold">Gestione contratto domestico</span>
+                                    </div>
+                                    <div class="item">
+                                        <div>
+                                            <img class="img" src="assets/img/avatar_2.png">
+                                        </div>
+                                        <div>
+                                            <span class="semibold font-13 text-capitalize">palash hawlader</span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="dropdown">
+                                            <button class="custom-btn dropdown-toggle" type="button"
+                                                id="dropdownMenuButton" data-toggle="dropdown">
+                                                New
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="">
+                                            <span class="font-13 semibold d-block">Mar 28, 2022</span>
+                                            <span class="font-12 semibold">24 hours</span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="file-item">
+                                            <span class="font-13 bold"> #69521</span>
+                                        </div>
+                                        <div class="file-item">
+                                            <span class="position-relative messigeIcon">
+                                                <i class="fas fa-comments"></i>
+                                                <span class="notice position-absolute">9+</span>
+                                            </span>
+                                        </div>
+                                        <div class="file-item">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- custom-bootstrap pagination -->
+                                <div class="d-flex justify-content-end my-2">
+                                    <nav aria-label="Page navigation example ">
+                                        <ul class="pagination">
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Next">
+                                                    <span aria-hidden="true">&raquo;</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-xl-3 px-2">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6 col-xl-12 mt-2 mt-md-0">
+
+                                    <div class="card rounded-0 border-0">
+                                        <div class="card-body pr-1">
+                                            <h3 class="title pb-2">Recent messages</h3>
+                                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link active" id="pills-unread-tab"
+                                                        data-toggle="pill" data-target="#pills-unread" type="button"
+                                                        role="tab" aria-controls="pills-unread"
+                                                        aria-selected="true">Unread</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="pills-allMessage-tab"
+                                                        data-toggle="pill" data-target="#pills-allMessage" type="button"
+                                                        role="tab" aria-controls="pills-allMessage"
+                                                        aria-selected="false">All message</button>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content messeageBox" id="pills-tabContent">
+                                                <!-- unread message -->
+                                                <div class="tab-pane fade show active" id="pills-unread" role="tabpanel"
+                                                    aria-labelledby="pills-unread-tab">
+
+                                                    <div class="allMessage">
+                                                        <a href="#" id="messageBoxShow">
+                                                            <div class="media">
+                                                                <div class="avatar">
+                                                                    <img src="assets/img/avatar_1.png" alt="">
+                                                                    <div class="unreadmsg"></div>
+                                                                </div>
+                                                                <div class="media-body">
+                                                                    <div
+                                                                        class="d-flex justify-content-between align-items-center">
+                                                                        <span class="font-14 bold">Dipa Dipa</span>
+                                                                        <span class="t-color font-10">5 min ago</span>
+                                                                    </div>
+                                                                    <div
+                                                                        class="d-flex justify-content-between align-items-center">
+                                                                        <span class="font-12 t-color">Have you over been
+                                                                            there?</span>
+                                                                        <!-- <span class="t-color font-10" style="color: #1A7894;"> <i class="fas fa-check-double"></i> </span> -->
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+
+                                                    <div class="allMessage">
+                                                        <a href="#" id="messageBoxShow">
+                                                            <div class="media">
+                                                                <div class="avatar">
+                                                                    <img src="assets/img/avatar_1.png" alt="">
+                                                                    <div class="unreadmsg"></div>
+                                                                </div>
+                                                                <div class="media-body">
+                                                                    <div
+                                                                        class="d-flex justify-content-between align-items-center">
+                                                                        <span class="font-14 bold">Dipa Dipa</span>
+                                                                        <span class="t-color font-10">5 min ago</span>
+                                                                    </div>
+                                                                    <div
+                                                                        class="d-flex justify-content-between align-items-center">
+                                                                        <span class="font-12 t-color">Have you over been
+                                                                            there?</span>
+                                                                        <!-- <span class="t-color font-10" style="color: #1A7894;"> <i class="fas fa-check-double"></i> </span> -->
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+
+                                                    <div class="allMessage">
+                                                        <a href="#" id="messageBoxShow">
+                                                            <div class="media">
+                                                                <div class="avatar">
+                                                                    <img src="assets/img/avatar_1.png" alt="">
+                                                                    <div class="unreadmsg"></div>
+                                                                </div>
+                                                                <div class="media-body">
+                                                                    <div
+                                                                        class="d-flex justify-content-between align-items-center">
+                                                                        <span class="font-14 bold">Angela
+                                                                            Alemanno</span>
+                                                                        <span class="t-color font-10">5 min ago</span>
+                                                                    </div>
+                                                                    <div
+                                                                        class="d-flex justify-content-between align-items-center">
+                                                                        <span class="font-12 t-color">Have you over been
+                                                                            there?</span>
+                                                                        <!-- <span class="t-color font-10" style="color: #1A7894;"> <i class="fas fa-check-double"></i> </span> -->
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+
+                                                    <div class="allMessage">
+                                                        <a href="#">
+                                                            <div class="media">
+                                                                <div class="avatar">
+                                                                    <img src="assets/img/avatar_1.png" alt="">
+                                                                    <div class="unreadmsg"></div>
+                                                                </div>
+                                                                <div class="media-body">
+                                                                    <div
+                                                                        class="d-flex justify-content-between align-items-center">
+                                                                        <span class="font-14 bold">Dipa Dipa</span>
+                                                                        <span class="t-color font-10">5 min ago</span>
+                                                                    </div>
+                                                                    <div
+                                                                        class="d-flex justify-content-between align-items-center">
+                                                                        <span class="font-12 t-color">Have you over been
+                                                                            there?</span>
+                                                                        <!-- <span class="t-color font-10" style="color: #1A7894;"> <i class="fas fa-check-double"></i> </span> -->
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+
+                                                    <div class="allMessage">
+                                                        <a href="#">
+                                                            <div class="media">
+                                                                <div class="avatar">
+                                                                    <img src="assets/img/avatar_1.png" alt="">
+                                                                    <div class="unreadmsg"></div>
+                                                                </div>
+                                                                <div class="media-body">
+                                                                    <div
+                                                                        class="d-flex justify-content-between align-items-center">
+                                                                        <span class="font-14 bold">Afrin Sultana</span>
+                                                                        <span class="t-color font-10">5 min ago</span>
+                                                                    </div>
+                                                                    <div
+                                                                        class="d-flex justify-content-between align-items-center">
+                                                                        <span class="font-12 t-color">Have you over been
+                                                                            there?</span>
+                                                                        <!-- <span class="t-color font-10" style="color: #1A7894;"> <i class="fas fa-check-double"></i> </span> -->
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+
+
+                                                </div>
+
+                                                <!-- all message -->
+                                                <div class="tab-pane fade" id="pills-allMessage" role="tabpanel"
+                                                    aria-labelledby="pills-allMessage-tab">
+
+                                                    <div class="allMessage">
+                                                        <a href="#">
+                                                            <div class="media">
+                                                                <div class="avatar">
+                                                                    <img src="assets/img/avatar_1.png" alt="">
+                                                                    <div class="unreadmsg"></div>
+                                                                </div>
+                                                                <div class="media-body">
+                                                                    <div
+                                                                        class="d-flex justify-content-between align-items-center">
+                                                                        <span class="font-14 bold">Afrin Sultana</span>
+                                                                        <span class="t-color font-10">5 min ago</span>
+                                                                    </div>
+                                                                    <div
+                                                                        class="d-flex justify-content-between align-items-center">
+                                                                        <span class="font-12 t-color">Have you over been
+                                                                            there?</span>
+                                                                        <!-- <span class="t-color font-10" style="color: #1A7894;"> <i class="fas fa-check-double"></i> </span> -->
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+
+                                                    <div class="allMessage">
+                                                        <a href="#">
+                                                            <div class="media">
+                                                                <div class="avatar">
+                                                                    <img src="assets/img/avatar_1.png" alt="">
+                                                                    <!-- <div class="unreadmsg"></div> -->
+                                                                </div>
+                                                                <div class="media-body">
+                                                                    <div
+                                                                        class="d-flex justify-content-between align-items-center">
+                                                                        <span class="font-14 bold">Dipa Dipa</span>
+                                                                        <span class="t-color font-10">5 min ago</span>
+                                                                    </div>
+                                                                    <div
+                                                                        class="d-flex justify-content-between align-items-center">
+                                                                        <span class="font-12 t-color">Have you over been
+                                                                            there?</span>
+                                                                        <span class="t-color font-10"
+                                                                            style="color: #1A7894;"> <i
+                                                                                class="fas fa-check-double"></i>
+                                                                        </span>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+
+                                                    <div class="allMessage">
+                                                        <a href="#">
+                                                            <div class="media">
+                                                                <div class="avatar">
+                                                                    <img src="assets/img/avatar_1.png" alt="">
+                                                                </div>
+                                                                <div class="media-body">
+                                                                    <div
+                                                                        class="d-flex justify-content-between align-items-center">
+                                                                        <span class="font-14 bold">Dipa Dipa</span>
+                                                                        <span class="t-color font-10">5 min ago</span>
+                                                                    </div>
+                                                                    <div
+                                                                        class="d-flex justify-content-between align-items-center">
+                                                                        <span class="font-12 t-color">Have you over been
+                                                                            there?</span>
+                                                                        <span class="t-color font-10"
+                                                                            style="color: #1A7894;"> <i
+                                                                                class="fas fa-check-double"></i>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- message-box -->
+                                    <div id="message-box">
+                                        <div id="message-box-close-icon">
+                                            <span><i class="fas fa-times"></i></span>
+                                        </div>
+
+                                        <div class="chatBox-header">
+                                            <div class="header-top">
+                                                <div class="item">
+                                                    <span class="new">New</span>
+                                                    <span class="gray-a semibold">#000022</span>
+                                                </div>
+                                                <div class="item fileId">
+                                                    <span class="black-22 semibold">#69521</span>
+                                                </div>
+                                            </div>
+                                            <div class="header-content mt-1 pb-2 border-bottom">
+                                                <div class="media">
+                                                    <img class="profile_img" src="assets/img/avatar_1.png">
+                                                    <div class="media-body pl-2">
+                                                        <div class="item">
+                                                            <div class="name">
+                                                                <span class="font-16 bold">Dipa Dipa</span>
+                                                            </div>
+                                                            <div class="time">
+                                                                <span class="font-12 gray-a">3h ago</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <div class="service-items">
+                                                                <span class="gray-a">GESTIONE CONTRATTO DOMESTICO</span>
+                                                            </div>
+                                                            <div class="time-items">
+                                                                <span><i class="fas fa-clock "></i></span>
+                                                                <span>12:35 PM - 12:55 PM</span>
+                                                            </div>
+                                                            <div class="date-items">
+                                                                <span><i class="fa fa-calendar"></i></span>
+                                                                <span>Mar 28, 2022</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="chatBox-body">
+                                            <div class="message-date">
+                                                <p>Yesterday</p>
+                                            </div>
+                                            <div class="receiving-msg">
+                                                <div>
+                                                    <div class="gray-a font-12">
+                                                        <!-- sender name -->
+                                                        <span>Dipa Dipa </span>
+                                                        <!-- time -->
+                                                        <span>9:00 PM</span>
+                                                    </div>
+                                                    <div class="message">
+                                                        What is Lorem Ipsum?
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="outgoing-msg">
+                                                <div>
+                                                    <div class="gray-a font-12">
+                                                        <!-- time -->
+                                                        <span>9:00 PM</span>
+                                                    </div>
+                                                    <div class="message">
+                                                        Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                        industry. Lorem Ipsum has been the industry's standard dummy text
+                                                        ever since the 1500s, when an unknown printer took a galley of type
+                                                        and scrambled it to make a type specimen book.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="message-date">
+                                                <p>Today</p>
+                                            </div>
+                                            <div class="receiving-msg">
+                                                <div>
+                                                    <div class="gray-a font-12">
+                                                        <!-- sender name -->
+                                                        <span>Dipa Dipa </span>
+                                                        <!-- time -->
+                                                        <span>9:00 PM</span>
+                                                    </div>
+                                                    <div class="message">
+                                                        It is a long established fact that a reader will be distracted by
+                                                        readable content of a page when looking at its layout.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="outgoing-msg">
+                                                <div>
+                                                    <div class="gray-a font-12">
+                                                        <!-- time -->
+                                                        <span>9:00 PM</span>
+                                                    </div>
+                                                    <div class="message">
+                                                        It is a long established fact that a reader will be distracted by
+                                                        readable content of a page when looking at its layout.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="outgoing-msg">
+                                                <div>
+                                                    <div class="gray-a font-12">
+                                                        <!-- time -->
+                                                        <span>9:00 PM</span>
+                                                    </div>
+                                                    <div class="message">
+                                                        It is a long established fact
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="receiving-msg">
+                                                <div>
+                                                    <div class="gray-a font-12">
+                                                        <span>Afrin Sultana</span>
+                                                        <!-- time -->
+                                                        <span>9:00 PM</span>
+                                                    </div>
+                                                    <div class="message">
+                                                        It is a long
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="outgoing-msg">
+                                                <div>
+                                                    <div class="gray-a font-12">
+                                                        <!-- time -->
+                                                        <span>9:00 PM</span>
+                                                    </div>
+                                                    <div class="message">
+                                                        It is a long established fact that a reader will be distracted by
+                                                        readable content of a page when looking at its layout.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="outgoing-msg">
+                                                <div>
+                                                    <div class="gray-a font-12">
+                                                        <!-- time -->
+                                                        <span>9:00 PM</span>
+                                                    </div>
+                                                    <div class="message">
+                                                        It is a long established fact
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="outgoing-msg">
+                                                <div>
+                                                    <div class="gray-a font-12">
+                                                        <!-- time -->
+                                                        <span>9:00 PM</span>
+                                                    </div>
+                                                    <div class="message">
+                                                        It is a long established fact
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="chatBox-footer mt-2">
+                                            <form action="#">
+                                                <div class="footer-item d-flex">
+                                                    <div class="message-text-box">
+                                                        <input type="text" name="message"
+                                                            placeholder="Write your message">
+                                                    </div>
+                                                    <div class="message-submit-btn">
+                                                        <button type="submit"><i
+                                                                class="fa fa-paper-plane icon"></i></button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                    <!-- end message box -->
+
+                                </div>
+
+                                <div class="col-sm-12 col-md-6 col-xl-12 mt-2 mt-md-3">
+                                    <div class="card border-0 rounded-0">
+                                        <div class="card-body overflow-hidden">
+                                            <h4 class="title">Today's status</h3>
+                                                <div id="piechart" style="width: 100%; max-width: 420px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 my-2 mt-md-3">
+
+                                    <div class="card border-0 rounded-0">
+                                        <div class="card-body">
+                                            <h3 class="title mb-2">Update/News</h3>
+
+                                            <div class="news">
+                                                <a href="update-news.html" class="news-desc">
+                                                    <h4 class="font-14 m-0 bold pb-1">IMMIGRATION</h4>
+                                                    <p class="font-12 m-0">
+                                                        The service offers complete support in the compilation
+                                                        of documents andrelated to stay in ...
+                                                    </p>
+                                                </a>
+                                            </div>
+                                            <div class="news">
+                                                <a href="update-news.html" class="news-desc">
+                                                    <h4 class="font-14 m-0 bold pb-1">LeGAL ADVICE</h4>
+                                                    <p class="font-12 m-0">
+                                                        It is a service that offers the possibility of receiving
+                                                        assistance from a specialized lawyer on legal issues relating to
+                                                        the various areas of law ...
+                                                    </p>
+                                                </a>
+                                            </div>
+                                            <div class="news">
+                                                <a href="update-news.html" class="news-desc">
+                                                    <h4 class="font-14 m-0 bold pb-1">IMMIGRATION</h4>
+                                                    <p class="font-12 m-0">
+                                                        The service offers complete support in the compilation
+                                                        of documents andrelated to stay in ...
+                                                    </p>
+                                                </a>
+                                            </div>
+                                            <div class="news">
+                                                <a href="#" class="news-desc">
+                                                    <h4 class="font-14 m-0 bold pb-1">IMMIGRATION</h4>
+                                                    <p class="font-12 m-0">
+                                                        The service offers complete support in the compilation
+                                                        of documents andrelated to stay in ...
+                                                    </p>
+                                                </a>
+                                            </div>
+
+                                            <div class="view-button text-center mt-3">
+                                                <a href="#">View More</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </main>
+        </div>
+    </div>
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Work', 11],
+                ['Eat', 2],
+                ['Commute', 2],
+                ['Watch TV', 2],
+                ['Sleep', 7]
+            ]);
+
+            var options = {
+
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

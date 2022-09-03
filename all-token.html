@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashboard - CSN helpdesk</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-topBar">
+        <!-- Navbar Brand-->
+        <a class="navbar-brand ps-3" href="index.html">
+            <img src="assets/img/Logo.png">
+        </a>
+        <!-- Sidebar Toggle-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
+                class="fas fa-bars"></i></button>
+        <!-- Navbar Search-->
+
+        <!-- Navbar-->
+        <ul class="navbar-nav ml-auto me-lg-3 me-2">
+            <li class="nav-item d-none d-sm-block">
+                <a class="nav-link"> Admin Name</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"> <i class="fas fa-bell"></i> </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-toggle="dropdown"
+                    aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#!">Settings</a></li>
+                    <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li><a class="dropdown-item" href="#!">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <a class="nav-link " href="index.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            Dashboard
+                        </a>
+
+                        <div  class="nav-border-bottom"></div>
+
+                        <a class="nav-link collapsed" href="javascript:void(0)" data-toggle="collapse" data-target="#collapseTickets" aria-expanded="false" aria-controls="collapseTickets">
+                            <div class="sb-nav-link-icon"><i class="fas fa-ticket-alt"></i></div>
+                            Tickets
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse " id="collapseTickets" aria-labelledby="collapseTickets" data-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="#">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-ticket-alt"></i></div>
+                                    Total Tickets
+                                </a>
+                                <a class="nav-link" href="#">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-plane"></i></div>
+                                    Travel Ticket
+                                </a>
+                            </nav>
+                        </div>
+
+                        <div  class="nav-border-bottom"></div>
+
+                        <a class="nav-link" href="#">
+                            <div class="sb-nav-link-icon"><i class="fas fa-calendar-alt"></i></div>
+                            Calendarize
+                        </a>
+
+                        <div  class="nav-border-bottom"></div>
+
+                        <a class="nav-link" href="#">
+                            <div class="sb-nav-link-icon"><i class="fas fa-newspaper"></i></div>
+                            Update/News
+                        </a>
+
+                        <div  class="nav-border-bottom"></div>
+
+                        <a class="nav-link " href="javascript:void(0)" data-toggle="collapse" data-target="#collapseConfigrations" aria-expanded="false" aria-controls="collapseConfigrations">
+                            <div class="sb-nav-link-icon"><i class="fas fa-cog"></i></div>
+                            Configrations
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse show" id="collapseConfigrations" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="#">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-check-circle"></i></div>
+                                    Statuses
+                                </a>
+                                <a class="nav-link" href="#">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-user-friends"></i></div>
+                                    Employes
+                                </a>
+                                <a class="nav-link" href="#">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                    Branches
+                                </a>
+
+                                <a class="nav-link " href="javascript:void(0)" data-toggle="collapse" data-target="#collapseConfigrationsQumas" aria-expanded="false" aria-controls="collapseConfigrationsQumas">
+                                    <div class="sb-nav-link-icon"><img src="assets/img/quora.png" width="22"></div>
+                                    Qumas
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+
+                                <div class="collapse show" id="collapseConfigrationsQumas" aria-labelledby="headingTwo" data-parent="#collapseConfigrations">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link " href="service.html">
+                                            <div class="sb-nav-sub-link-icon"><i class="fas fa-circle"></i></div>
+                                            Service
+                                        </a>
+                                        <a class="nav-link active" href="all-token.html">
+                                            <div class="sb-nav-sub-link-icon"><i class="fas fa-circle"></i></div>
+                                            All Token
+                                        </a>
+                                    </nav>
+                                </div>
+
+                            </nav>
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="dashboard-header bg-white p-2 shadow-sm">
+                    <h3>
+                        <i class="fas fa-tachometer-alt"></i>
+                        Dashboard
+                    </h3>
+                </div>
+                <div class="container-fluid px-3">
+
+                    <div class="allToken_page_section">
+
+                        <div class="pb-1" style="position: sticky; top: 50px; z-index: 9;">
+                            <form action="#">
+                                <div class="filter-box py-3">
+                                   <h3 class="">All Token</h3>
+                                    
+                                    <div>
+                                        <span class="t-color font-14">Sort by:</span>
+                                        <select name="" class="font-14 border-0 bg-transparent">
+                                            <option value="">Created date</option>
+                                            <option value="">May 5 2021</option>
+                                        </select>
+                                    </div>
+    
+                                    <div>
+                                        <button class="btn bg-white t-color font-14">
+                                            Filter <i class="fas fa-bars"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+    
+                            <ul class="qumas_allToken_header">
+                                <li class="id">ID</li>
+                                <li class="assign">ASSIGNEE</li>
+                                <li class="service">SERVICE</li>
+                                <li class="receive_payment">RECEIVE PAYMENT</li>
+                                <li class="status">STATUS</li>
+                                <li class="date_schedule">DATE & SCHEDULE</li>
+                                <li class="token_id">TOKEN ID</li>
+                            </ul>
+                        </div>
+
+                        <div class="qumas_allToken_contents">
+
+                            <div class="contents">
+                                <div class="item id">
+                                    <span class="times">12:40</span>
+                                    <span class="semibold">#000023</span>
+                                </div>
+
+                                <div class="item assign">
+                                    <div>
+                                        <img class="img" src="assets/img/avatar_1.png">
+                                    </div>
+                                    <div>
+                                        <span class="semibold">Angela Alemanno</span>
+                                    </div>
+                                </div>
+
+                                <div class="item service">
+                                    <span class="semibold">Gestione contratto domestico</span>
+                                </div>
+
+                                <div class="item receive_payment">
+                                    <div data-target="#receivePayment" data-toggle="modal">
+                                        <img class="payBtn" src="assets/image/payLogo.png">
+                                    </div>
+                                </div>
+
+                                <div class="item status">
+                                    <div class="dropdown">
+                                        <button class="custom-btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown">
+                                            New
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="item date_schedule">
+                                    <div class="">
+                                        <span class="semibold d-block">Mar 28, 2022</span>
+                                        <span class="font-12 semibold">12:35 PM - 12:55 PM</span>
+                                    </div>
+                                </div>
+
+                                <div class="item token_id">
+                                    <div class="file-item">
+                                        <span class="semibold"> #69521</span>
+                                    </div>
+                                    <div class="file-item">
+                                        <span class="position-relative messigeIcon">
+                                            <i class="fas fa-comments"></i>
+                                            <span class="notice position-absolute">9+</span>
+                                        </span>
+                                    </div>
+                                    <a href="#" class="CallBtn called">
+                                        Called
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="contents">
+                                <div class="item id">
+                                    <span class="times">12:40</span>
+                                    <span class="semibold">#000023</span>
+                                </div>
+
+                                <div class="item assign">
+                                    <div>
+                                        <img class="img" src="assets/img/avatar_1.png">
+                                    </div>
+                                    <div>
+                                        <span class="semibold">Angela Alemanno</span>
+                                    </div>
+                                </div>
+
+                                <div class="item service">
+                                    <span class="semibold">Gestione contratto domestico</span>
+                                </div>
+
+                                <div class="item receive_payment">
+                                    <div data-target="#paymentcard" data-toggle="modal">
+                                        <img class="payBtn" src="assets/image/payLogo.png">
+                                    </div>
+                                </div>
+
+                                <div class="item status">
+                                    <div class="dropdown">
+                                        <button class="custom-btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown">
+                                            New
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="item date_schedule">
+                                    <div class="">
+                                        <span class="semibold d-block">Mar 28, 2022</span>
+                                        <span class="font-12 semibold">12:35 PM - 12:55 PM</span>
+                                    </div>
+                                </div>
+
+                                <div class="item token_id">
+                                    <div class="file-item">
+                                        <span class="semibold"> #69521</span>
+                                    </div>
+                                    <div class="file-item">
+                                        <span class="position-relative messigeIcon">
+                                            <i class="fas fa-comments"></i>
+                                            <span class="notice position-absolute">9+</span>
+                                        </span>
+                                    </div>
+                                    <a href="#" class="CallBtn">
+                                        Call
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="contents">
+                                <div class="item id">
+                                    <span class="times">12:40</span>
+                                    <span class="semibold">#000023</span>
+                                </div>
+
+                                <div class="item assign">
+                                    <div>
+                                        <img class="img" src="assets/img/avatar_1.png">
+                                    </div>
+                                    <div>
+                                        <span class="semibold">Angela Alemanno</span>
+                                    </div>
+                                </div>
+
+                                <div class="item service">
+                                    <span class="semibold">Gestione contratto domestico</span>
+                                </div>
+
+                                <div class="item receive_payment">
+                                    <div data-target="#paymentcardProcessing" data-toggle="modal">
+                                        <img class="payBtn" src="assets/image/payLogo.png">
+                                    </div>
+                                </div>
+
+                                <div class="item status">
+                                    <div class="dropdown">
+                                        <button class="custom-btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown">
+                                            New
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="item date_schedule">
+                                    <div class="">
+                                        <span class="semibold d-block">Mar 28, 2022</span>
+                                        <span class="font-12 semibold">12:35 PM - 12:55 PM</span>
+                                    </div>
+                                </div>
+
+                                <div class="item token_id">
+                                    <div class="file-item">
+                                        <span class="semibold"> #69521</span>
+                                    </div>
+                                    <div class="file-item">
+                                        <span class="position-relative messigeIcon">
+                                            <i class="fas fa-comments"></i>
+                                            <span class="notice position-absolute">9+</span>
+                                        </span>
+                                    </div>
+                                    <a href="#" class="CallBtn">
+                                        Call
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="contents">
+                                <div class="item id">
+                                    <span class="times">12:40</span>
+                                    <span class="semibold">#000023</span>
+                                </div>
+
+                                <div class="item assign">
+                                    <div>
+                                        <img class="img" src="assets/img/avatar_1.png">
+                                    </div>
+                                    <div>
+                                        <span class="semibold">Angela Alemanno</span>
+                                    </div>
+                                </div>
+
+                                <div class="item service">
+                                    <span class="semibold">Gestione contratto domestico</span>
+                                </div>
+
+                                <div class="item receive_payment">
+                                    <div data-target="#receivePaymentDone" data-toggle="modal">
+                                        <img class="payBtn" src="assets/image/payLogo.png">
+                                    </div>
+                                </div>
+
+                                <div class="item status">
+                                    <div class="dropdown">
+                                        <button class="custom-btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown">
+                                            New
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="item date_schedule">
+                                    <div class="">
+                                        <span class="semibold d-block">Mar 28, 2022</span>
+                                        <span class="font-12 semibold">12:35 PM - 12:55 PM</span>
+                                    </div>
+                                </div>
+
+                                <div class="item token_id">
+                                    <div class="file-item">
+                                        <span class="semibold"> #69521</span>
+                                    </div>
+                                    <div class="file-item">
+                                        <span class="position-relative messigeIcon">
+                                            <i class="fas fa-comments"></i>
+                                            <span class="notice position-absolute">9+</span>
+                                        </span>
+                                    </div>
+                                    <a href="#" class="CallBtn">
+                                        Call
+                                    </a>
+                                </div>
+                            </div>
+                            
+                        
+                        </div>
+
+                        <!-- Modal for Receive Payment-->
+                        <div class="modal fade" id="receivePayment">
+                            <div class="modal-dialog  modal-dialog-centered" role="document">
+                                <div class="modal-content rounded-0">
+                                    <div class="modal-header rounded-0">
+                                        <h5 class="modal-title">Receive Payment</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body p-4">
+                                        
+                                        <div class="qumasToken_payment_details">
+                                            <div>
+                                                <span>ID</span>
+                                                <span>#000023</span>
+                                            </div>
+                                            <div>
+                                                <span>Assignee</span>
+                                                <span>Angela Alemanno</span>
+                                            </div>
+                                            <div>
+                                                <span>Service</span>
+                                                <span>Gestione contratto domestico</span>
+                                            </div>
+                                            <div>
+                                                <span>Date & Schedule</span>
+                                                <span>Mar 28, 2022 | 12:35 PM - 12:55 PM</span>
+                                            </div>
+                                            <div>
+                                                <span>Token ID</span>
+                                                <span>#69521</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="qumasToken_payment_amount">
+                                            <p>Amount</p>
+                                            <h3><span>€</span> 85.00</h3>
+                                        </div>
+                                            
+                                        
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn bg-btn h-48 px-5" onclick="showCardHolderModal()">Send Payment Request</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Modal for hold the card-->
+                        <div class="modal fade" id="paymentcard">
+                            <div class="modal-dialog  modal-dialog-centered" role="document">
+                                <div class="modal-content rounded-0">
+                                    <div class="modal-body px-5 py-4">
+
+                                        <div class="qumasToken_payment_card">
+                                            <p>Amount</p>
+                                            <h3><span>€</span> 85.00</h3>
+                                        </div>
+                                            
+                                        <div class="hold_the_card">
+                                            <img src="assets/image/Hold-the-card.gif" width="100%"> 
+                                        </div>
+                                        
+                                        <h3 class="hold_card_title">Hold the card to the back of the Tablet</h3>
+                                        <p class="hold_card_time">Time left: <span id="LeftTime"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Modal for transaction Processing...-->
+                        <div class="modal fade" id="paymentcardProcessing">
+                            <div class="modal-dialog  modal-dialog-centered" role="document">
+                                <div class="modal-content rounded-0">
+                                    <div class="modal-body p-5">
+                                            
+                                        <div class="hold_the_card mb-2">
+                                            <img src="assets/image/Processing.gif" width="100%"> 
+                                        </div>
+                                        
+                                        <div class="processing_card_footer">
+                                            <p>Your transaction is</p>
+                                            <h3>Processing...</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Modal for payment received-->
+                        <div class="modal fade" id="receivePaymentDone">
+                            <div class="modal-dialog  modal-dialog-centered" role="document">
+                                <div class="modal-content rounded-0">
+                                    <div class="modal-body py-4">
+                                        <div class="received">
+                                            <img src="assets/image/check.png">
+                                            <div class="qumasToken_payment_card">
+                                                <p>Received</p>
+                                                <h3><span>€</span> 85.00</h3>
+                                            </div>
+                                        </div>
+                                        <div class="qumasToken_payment_received">
+                                            <div>
+                                                <span>Name</span>
+                                                <span>Palash Howladar</span>
+                                            </div>
+                                            <div>
+                                                <span>Bank</span>
+                                                <span>IFIC</span>
+                                            </div>
+                                            <div>
+                                                <span>Transaction ID</span>
+                                                <span>1214654958653</span>
+                                            </div>
+                                            <div>
+                                                <span>Date</span>
+                                                <span>14 Aug 2022</span>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                        <div class="d-flex justify-content-center mt-4">
+                                            <button class="btn bg-btn h-48 px-4" onclick="receivedDone()">Back to Home</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="container">
+                            <div id="container" style="height: 300px;">
+                            
+                             
+                         
+                            </div>
+   
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </main>
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.7/lottie.min.js" integrity="sha512-HDCfX3BneBQMfloBfluMQe6yio+OfXnbKAbI0SnfcZ4YfZL670nc52Aue1bBhgXa+QdWsBdhMVR2hYROljf+Fg==" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/scripts.js"></script>
+    
+   <script>
+    function showCardHolderModal() {
+        $('#receivePayment').modal('hide')
+        $('#paymentcard').modal('show')
+        setTimeout(function(){
+            $('#paymentcard').modal('hide')
+            $('#receivePaymentDone').modal('show')
+            
+        }, 5000);
+    }
+
+    function receivedDone() {
+        $('#receivePaymentDone').modal('hide')
+    }
+
+
+    var timeLeft = 30;
+    var elem = document.getElementById('LeftTime');
+    
+    var timerId = setInterval(countdown, 1000);
+    
+    function countdown() {
+      if (timeLeft == -1) {
+        clearTimeout(timerId);
+        doSomething();
+      } else {
+        elem.innerHTML = timeLeft + ' sec';
+        timeLeft--;
+      }
+    }
+   </script>
+
+</body>
+
+</html>
